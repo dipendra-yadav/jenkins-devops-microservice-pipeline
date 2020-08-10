@@ -1,0 +1,4 @@
+com\deependra\microservices\currencyexchangeservice\ExchangeValueRepository.class
+com\deependra\microservices\currencyexchangeservice\CurrencyExchangeServiceApplication.class
+com\deependra\microservices\currencyexchangeservice\ExchangeValue.class
+com\deependra\microservices\currencyexchangeservice\CurrencyExchangeController.class

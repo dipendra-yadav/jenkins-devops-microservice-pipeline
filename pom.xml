@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.in28minutes.microservices</groupId>
+	<groupId>com.deependra.microservices</groupId>
 	<artifactId>currency-exchange-basic</artifactId>
 	<version>0.0.1-RELEASE</version> 
 	<packaging>jar</packaging>
@@ -219,6 +219,7 @@
 	</build>
 
 	<repositories>
+		<!--
 		<repository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
@@ -235,9 +236,11 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		-->
 	</repositories>
 
 	<pluginRepositories>
+	<!--
 		<pluginRepository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
@@ -254,5 +257,6 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
+		-->
 	</pluginRepositories>
 </project>
