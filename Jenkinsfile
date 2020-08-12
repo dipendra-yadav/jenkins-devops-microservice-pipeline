@@ -1,26 +1,20 @@
+//SCRIPTED
+
 //DECLARATIVE
 pipeline {
 	agent any
-	/*agent { 
-		docker { 
-			image 'maven:3.3.3' 
-		}
-	 } */
-
-    environment {
+	// agent { docker { image 'maven:3.6.3'} }
+	// agent { docker { image 'node:13.8'} }
+	environment {
 		dockerHome = tool 'myDocker'
 		mavenHome = tool 'myMaven'
-       PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
 	}
 
-
-
-
 	stages {
-
-        stage('Checkout') {
+		stage('Checkout') {
 			steps {
-				sh  'mvn --version'
+				sh 'mvn --version'
 				sh 'docker version'
 				echo "Build"
 				echo "PATH - $PATH"
@@ -31,29 +25,55 @@ pipeline {
 				echo "BUILD_URL - $env.BUILD_URL"
 			}
 		}
-         stage('Compile') {
+		stage('Compile') {
 			steps {
-				sh 'mvn clean compile'
+				sh "mvn clean compile"
 			}
 		}
 
 		stage('Test') {
 			steps {
-			     sh 'mvn test'
+				sh "mvn test"
 			}
 		}
 
-      	stage('Integration Test') {
+		stage('Integration Test') {
 			steps {
-				sh 'mvn failsafe:integration-test failsafe:verify'
+				sh "mvn failsafe:integration-test failsafe:verify"
 			}
-		 }
-	
-	}
-	post {
+		}
 
-        always {
-			echo 'Im awesome.I run always'
+		stage('Package') {
+			steps {
+				sh "mvn package -DskipTests"
+			}
+		}
+
+		stage('Build Docker Image') {
+			steps {
+				//"docker build -t in28min/currency-exchange-devops:$env.BUILD_TAG"
+				script {
+					dockerImage = docker.build("in28min/currency-exchange-devops:${env.BUILD_TAG}")
+				}
+
+			}
+		}
+
+		stage('Push Docker Image') {
+			steps {
+				script {
+					docker.withRegistry('', 'dockerhub') {
+						dockerImage.push();
+						dockerImage.push('latest');
+					}
+				}
+			}
+		}
+	} 
+	
+	post {
+		always {
+			echo 'Im awesome. I run always'
 		}
 		success {
 			echo 'I run when you are successful'
@@ -61,9 +81,5 @@ pipeline {
 		failure {
 			echo 'I run when you fail'
 		}
-
-
 	}
-
-	
 }
