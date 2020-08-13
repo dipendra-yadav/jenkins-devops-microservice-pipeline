@@ -1,4 +1,4 @@
-package com.in28minutes.microservices.currencyexchangeservice.cucumber;
+package com.deependra.microservices.currencyexchangeservice.cucumber;
 
 import org.junit.runner.RunWith;
 

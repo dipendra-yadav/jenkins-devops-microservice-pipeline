@@ -51,9 +51,9 @@ pipeline {
 
 		stage('Build Docker Image') {
 			steps {
-				//"docker build -t in28min/currency-exchange-devops:$env.BUILD_TAG"
+				//"docker build -t deependra-dev/currency-exchange-devops:$env.BUILD_TAG"
 				script {
-					dockerImage = docker.build("in28min/currency-exchange-devops:${env.BUILD_TAG}")
+					dockerImage = docker.build("deependra-dev/currency-exchange-devops:${env.BUILD_TAG}")
 				}
 
 			}
@@ -73,10 +73,10 @@ pipeline {
 	
 	post {
 		always {
-			echo 'Im awesome. I run always'
+			echo 'I run always'
 		}
 		success {
-			echo 'I run when you are successful'
+			echo 'I run when you are successfull'
 		}
 		failure {
 			echo 'I run when you fail'

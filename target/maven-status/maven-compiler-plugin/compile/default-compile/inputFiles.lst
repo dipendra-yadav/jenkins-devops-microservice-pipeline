@@ -1,7 +1,7 @@
-C:\jenkins-devops-microservice-pipeline\src\main\java\com\in28minutes\microservices\currencyexchangeservice\util\environment\EnvironmentConfigurationLogger.java
-C:\jenkins-devops-microservice-pipeline\src\main\java\com\in28minutes\microservices\currencyexchangeservice\resource\ExchangeValue.java
-C:\jenkins-devops-microservice-pipeline\src\main\java\com\in28minutes\microservices\currencyexchangeservice\util\environment\InstanceInformationService.java
-C:\jenkins-devops-microservice-pipeline\src\main\java\com\in28minutes\microservices\currencyexchangeservice\HelloWorld.java
-C:\jenkins-devops-microservice-pipeline\src\main\java\com\in28minutes\microservices\currencyexchangeservice\resource\ExchangeValueRepository.java
-C:\jenkins-devops-microservice-pipeline\src\main\java\com\in28minutes\microservices\currencyexchangeservice\CurrencyExchangeServiceApplicationH2.java
-C:\jenkins-devops-microservice-pipeline\src\main\java\com\in28minutes\microservices\currencyexchangeservice\resource\CurrencyExchangeController.java
+C:\jenkins-devops-microservice-pipeline\src\main\java\com\deependra\microservices\currencyexchangeservice\util\environment\EnvironmentConfigurationLogger.java
+C:\jenkins-devops-microservice-pipeline\src\main\java\com\deependra\microservices\currencyexchangeservice\util\environment\InstanceInformationService.java
+C:\jenkins-devops-microservice-pipeline\src\main\java\com\deependra\microservices\currencyexchangeservice\resource\ExchangeValueRepository.java
+C:\jenkins-devops-microservice-pipeline\src\main\java\com\deependra\microservices\currencyexchangeservice\CurrencyExchangeServiceApplicationH2.java
+C:\jenkins-devops-microservice-pipeline\src\main\java\com\deependra\microservices\currencyexchangeservice\HelloWorld.java
+C:\jenkins-devops-microservice-pipeline\src\main\java\com\deependra\microservices\currencyexchangeservice\resource\CurrencyExchangeController.java
+C:\jenkins-devops-microservice-pipeline\src\main\java\com\deependra\microservices\currencyexchangeservice\resource\ExchangeValue.java
