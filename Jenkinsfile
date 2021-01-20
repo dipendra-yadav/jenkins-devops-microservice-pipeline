@@ -5,6 +5,7 @@ pipeline {
 	agent any
 	// agent { docker { image 'maven:3.6.3'} }
 	// agent { docker { image 'node:13.8'} }
+	//we are setting up the environment to Look for where Maven & Docker are present  in order to run this Pipeline.
 	environment {
 		dockerHome = tool 'myDocker'
 		mavenHome = tool 'myMaven'
@@ -16,7 +17,7 @@ pipeline {
 			steps {
 				sh 'mvn --version'
 				sh 'docker version'
-				echo "Build"
+				echo "Build"	
 				echo "PATH - $PATH"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
 				echo "BUILD_ID - $env.BUILD_ID"
