@@ -2,4 +2,4 @@
 jenkins-devops-microservice-pipeline
 
 
-Project explains the  building of an Docker Image  for a microservivce and pushign it to the DockerHUb. 
+Project explains the  building of a Docker Image  for a microservivce and pushing  it to the DockerHUb. 
